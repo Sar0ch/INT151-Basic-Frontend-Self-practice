@@ -1,0 +1,22 @@
+//ใช้ ai ในการ gen โจทย์จากเนื้อหาที่เรียนเพื่อมาใช้ในการฝึกทำ
+
+// 1. สร้างอาร์เรย์ scores เก็บคะแนนนักเรียน 6 คน แล้วหาคะแนนสูงสุดในอาร์เรย์ หาคะแนนสูงสุด (Max Score)
+const scores = [45, 78, 88, 32, 95, 60];
+const maxScore = Math.max(...scores);       // ใช้ spread เพื่อแปลงอาร์เรย์เป็น list ของตัวเลข
+console.log("คะแนนสูงสุด:", maxScore);        
+
+// 2. ใช้ .map() กับอาร์เรย์ scores เพื่อเปลี่ยนเป็นข้อความ "ผ่าน" ถ้าคะแนน >= 50 และ "ไม่ผ่าน" ถ้าต่ำกว่า 50 ตรวจสอบผ่าน-ไม่ผ่าน (Pass or Fail)
+const passOrFail = scores.map(score => score >= 50 ? "ผ่าน" : "ไม่ผ่าน"); // .map() เพื่อแปลงแต่ละค่าของอาร์เรย์ scores เป็นข้อความใหม่ 
+// จำไม่ได้ว่า .map ใช้ยังไง จึงไปถาม chatgpt แล้วกลับมาฝึกทำต่อ
+console.log("ผ่าน/ไม่ผ่าน:", passOrFail);
+
+// 3. Aให้มีอาร์เรย์ของนักเรียนที่เป็น object { name, score } แล้วใช้ .reduce() เพื่อหาค่าเฉลี่ยคะแนนของทุกคน หาค่าเฉลี่ยคะแนนนักเรียน (Average Score)
+const students = [
+  { name: "ไก่", score: 78 },
+  { name: "เป็ด", score: 88 },
+  { name: "สมชาย", score: 95 },
+  { name: "สมหญิง", score: 60 }
+];
+
+const averageScore = students.reduce((sum, student) => sum + student.score, 0) / students.length; // ใช้ .reduce() เพื่อรวมคะแนนของนักเรียนทุกคน
+console.log("ค่าเฉลี่ย:", averageScore);
