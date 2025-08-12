@@ -20,3 +20,7 @@ const students = [
 
 const averageScore = students.reduce((sum, student) => sum + student.score, 0) / students.length; // ใช้ .reduce() เพื่อรวมคะแนนของนักเรียนทุกคน
 console.log("ค่าเฉลี่ย:", averageScore);
+
+ได้ลองศึกษาเรื่อง .splice() วิธีใช้ก็คือ (index เริ่มต้นที่อยากลบ , 
+                                ไม่อยากลบให้ใส่ 0 ถ้าอยากลบให้ใส่ deletecount ว่าอยากลบทั้งหมดกี่ตัว 
+                                , ถ้าเราใส่0 ตรงนี้จะให้เราใส่ item ที่เราอยากเพิ่มแทรกเข้าไปหรือเราอยากลบก็แล้วค่อยแทรกเข้าไปก็ได้เหมือนกัน ) 

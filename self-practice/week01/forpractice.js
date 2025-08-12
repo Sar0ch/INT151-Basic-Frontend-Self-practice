@@ -26,3 +26,15 @@ const students = [
 
 const averageScore = students.reduce((sum, student) => sum + student.score, 0) / students.length; // ใช้ .reduce() เพื่อรวมคะแนนของนักเรียนทุกคน
 console.log("ค่าเฉลี่ย:", averageScore);
+
+//4 ใช้ splice
+let arr = [1, 2, 3, 4, 5];
+
+// ลบ 2 ตัวเริ่มจาก index 1 (คือเลข 2 กับ 3)
+arr.splice(1, 2); // arr เป็น [1, 4, 5]
+
+// แทรก 99 ที่ index 2 โดยไม่ลบตัวไหน
+arr.splice(2, 0, 99); // arr เป็น [1, 4, 99, 5]
+
+// ลบ 1 ตัวที่ index 0 แล้วแทรก 100 กับ 101 แทน
+arr.splice(0, 1, 100, 101); // arr เป็น [100, 101, 4, 99, 5]
