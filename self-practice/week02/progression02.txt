@@ -1,0 +1,61 @@
+// + คือ binary op ต้องใช้จาก operand ถ้ามี string อย่างน้อย 1 ตัวจะเป็น concat ถ้าเป็น number ทั้งคู่ จะเป็น บวก แบบ number
+
+constructor(firstName, lastName, age){
+    this.firstName = firstName  // parameter "firstName" → property "this.firstName"
+    this.lastName  = lastName   // parameter "lastName"  → property "this.lastName"
+    this.age       = age        // parameter "age"       → property "this.age"
+}
+
+!1 Object literals 
+-สร้างง่าย อ่านง่าย
+-ถ้าต้องสร้างหลาย object ที่มีโครงสร้างเหมือนกัน เราต้องเขียนโค้ดซ้ำๆ 
+
+!2 Constructor functions
+-สร้างหลาย object ที่มีโครงสร้างเดียวกันได้ง่าย
+-ต้องใช้ this และ new ซึ่งถ้าใช้ผิดจะเกิดบั๊กง่าย
+
+!3 ES6 Class
+-ถ้าต้องการสร้างหลาย obj ที่แชร์ทุก obj ควรสร้างเป็น class
+-อยากใช้ฟังก์ชั่นเดียวกันเเชร์ทุก obj ควรสร้างเป็น class
+
+!4 Object.create (exiting system)
+-สามารถกำหนด prototype ของ object ได้ตรง ๆ โดยไม่ต้องสร้าง class หรือ constructor
+-เหมาะกับเวลาที่เรามี object ต้นแบบอยู่แล้ว → อยากสร้าง object ใหม่ที่ “สืบทอดคุณสมบัติ” โดยตรง
+
+how to compare Obj
+1.ใช้ === ควรเช็คทั้ง type และ value เลี่ยง == object.js()เช็ค value เหมือนกัน
+    object มันเก็บ reference ไปยัง memory address ของ object
+
+/*
+Object Destructuring - ใช้เยอะมากในการเขียน app 
+- แยกโครงสร้าง
+- สังเกตจาก {} , [] 
+จากเขียนยาวๆยุบเหลือบรรทัดเดียว 
+
+ตอน Destructuring ใน array ใช้คุณสมบัติ
+- order เพราะ object ไม่มีลำดับมีแต่ keys ตอนแยกโครงสร้างต้องระบุ keys 
+ */
+
+const stdd = {id:1 ,name: "Somchai", address: {no:111, city: "Bangkok"}}
+let {name : fullName, id } = stdd   //Object Destructuring สังเกตจาก {} 
+                                    // ดึงแล้วเปลี่ยนชื่อเป็น fullName
+
+console.log(fullName) // "Somchai"
+console.log(id)       // 1
+
+let { address: { city: myAddress } } = stdd  //city: myAddress = ดึงค่า city แต่เอาไปเก็บไว้ในตัวแปรชื่อ myAddress
+console.log(myAddress) // "Bangkok"
+address คือ outer
+city คือ inner
+
+/*
+สรุป
+
+{ key } → ดึง property ธรรมดา
+
+{ key: newName } → ดึง property แล้วเปลี่ยนชื่อตัวแปร
+
+{ outer: { inner } } → ดึง property จาก object ซ้อน 
+
+{ outer: { inner: newName } } → ดึง property จาก object ซ้อน + เปลี่ยนชื่อตัวแปร
+ */
