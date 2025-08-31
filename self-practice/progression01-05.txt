@@ -9,3 +9,7 @@ Week02
 -เข้าใจความต่างระหว่าง value vs reference อย่างชัดเจน (numbers/strings เทียบค่าตรง ๆ, objects เทียบที่อยู่ในหน่วยความจำ) ->ทำให้เวลาเจอโจทย์เกี่ยวกับการเปรียบเทียบ object ไม่งง
 -รู้จักการ ออกแบบโครงสร้าง object ด้วย class เพื่อให้โค้ด reusable 
 -Destructuring ทำให้มอง object ซ้อน (nested object) ง่ายขึ้น เช่น student.address.city → ใช้ { address: { city } } ดึงได้เลย
+
+Week03
+-
+-
