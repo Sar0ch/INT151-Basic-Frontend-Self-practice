@@ -87,6 +87,12 @@ console.log(Test(Test2)(10));//console.log(Test2(10))
 // arrow function
 const square = n => n * n
 
+function square(x) {
+  return x * x;
+}
+
+
+
 //! 03.20. ย้อน argumnent
 function doSomething(a,b,...c){
     console.log(`length: ${arguments.length}`)  //arguments เก็บ ค่าพารามิเตอร์ทั้งหมดที่ส่งเข้ามาในฟังก์ชัน

@@ -1,0 +1,8 @@
+toLocaleUpperCase()/ toLocaleLowerCase() → ตัวอักษรพิมพ์ใหญ่/เล็ก ตามกฎของภาษา
+console.log("istanbul".toLocaleUpperCase("tr-TR")); // İSTANBUL (ภาษาตุรกีมีตัว İ พิเศษ)
+console.log("istanbul".toUpperCase());              // ISTANBUL (ภาษาอังกฤษปกติ)
+เป็นการเจาะจงให้มากขึ้น (ใช้ chatgpt สรุปเพิ่มขึ้นให้เข้าใจกว่าเดิม)
+
+higher order function คือ fnที่รับfnเป็น parameter
+callback function ต้องการรับเป็นparameter ที่ให้เงื่อนไขเป็น T หรือ F
+
