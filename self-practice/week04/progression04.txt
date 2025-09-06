@@ -6,3 +6,6 @@ console.log("istanbul".toUpperCase());              // ISTANBUL (ภาษาอ
 higher order function คือ fnที่รับfnเป็น parameter
 callback function ต้องการรับเป็นparameter ที่ให้เงื่อนไขเป็น T หรือ F
 
+ความต่างระหว่าง .includes ใน array กับ string
+-Array.includes(x) → ดูว่า “มี element x อยู่ใน array ตรง ๆ มั้ย”
+-String.includes(y) → ดูว่า “มี substring y อยู่ใน string มั้ย”

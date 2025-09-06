@@ -131,11 +131,15 @@ todo array iterator method
 *Searching and Sorting Methods
     ค้นหาหรือจัด array
 
-    indexOf() หาindex
+    indexOf() หาindex 
     includes()  มีไอเทมนั้นใน array มั้ย
-        -ไว้
+        -เช็กว่าค่าหนึ่งอยู่ใน array หรือเปล่า (แทนที่ indexOf(...) !== -1 ที่ยาวกว่า)
+        -เช็ก substring ใน string ได้ด้วย
+        -Array.includes(x) → ดูว่า “มี element x อยู่ใน array ตรง ๆ มั้ย”
+        -String.includes(y) → ดูว่า “มี substring y อยู่ใน string มั้ย”
     sort()  เรียงลำดับ
     reverse()  กลับด้าน array จากท้ายมาหน้า จากหน้ามาท้าย
+        - แก้ใน  original array
 
 *Array to String Conversion
     
@@ -162,7 +166,9 @@ console.log('ตรงนี้ไม่แก้ array เริ่มต้น
 const shortWords = words.filter(wordLength)
 console.log(words)
 console.log(shortWords)
+
 //sort function changes original array
+// sort() เรียงลำดับค่าใน Array แบบ string 11 จะมาก่อน 2 , พิมพ์ใหญ่จะมาก่อน พิมพ์เล็ก
 console.log("ตรงนี้จะเปลี่ยนค่า array original")
 const sortedWords = words.sort()
 console.log(words)

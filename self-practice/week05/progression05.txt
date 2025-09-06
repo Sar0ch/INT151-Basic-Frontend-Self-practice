@@ -1,0 +1,2 @@
+.map() - ใช้ในกรณีที่ต้องการแปลง value ของ array 
+array.isarray 
