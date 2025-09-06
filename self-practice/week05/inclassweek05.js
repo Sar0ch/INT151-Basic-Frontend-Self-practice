@@ -80,7 +80,14 @@ console.log(sorted);
 
 // ย้อนเรียนตอน 2.20.00
 /*
-! Tree shaking - 
+! ES Modules
+! Tree shaking 
+  - remove code ที่ไม่ได้ใช้ พวก deadcode unuse code หรือ code ที่ไม่ได้ถูกเรียกใช้ 
+  - แล้วเราจะรู้ไดไงว่าโค้ดไหนไม่ได้ใช้ ถ้าไม่ได้ใช้ใน vs code มันจะมีสีเทาๆคลุมไว้ให้ แต่อันนี้เป็นของ edit ส่วนวิธีดูว่าอันไหนต้องใช้ Tree shaking 
+  - วิธีเรียกใช้ 
+    - ดูจากการ import อะไรที่ไม่ได้ import แล้วเป็น local scope ไฟล์ไหนจะใช้ต้อง import 
+    - มันจะทำงานได้ดีใน local ถ้า
+  ? ใน 1 ไฟล์ เรียกเป็น module 
 */
 
 function echo(msg){
