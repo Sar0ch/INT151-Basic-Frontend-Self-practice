@@ -14,3 +14,4 @@ Tree shaking
     Default Export
         มีได้เพียง 1 อันต่อไฟล์
             เวลา import ไม่ต้องใส่ {}
+ได้ลองฝึกทำโจทย์ practice จากไฟล์ ใน team 
